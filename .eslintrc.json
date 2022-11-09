@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2022
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jest-dom",
+    "testing-library",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

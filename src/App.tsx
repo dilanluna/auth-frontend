@@ -10,6 +10,7 @@ function App() {
         <a
           href="https://vitejs.dev"
           target="_blank"
+          rel="noreferrer"
           className="font-medium text-[#646cff] leading-[inherit] hover:text-[#747bff] dark:hover:text-[#535bf2]">
           <img
             src="/vite.svg"
@@ -20,6 +21,7 @@ function App() {
         <a
           href="https://reactjs.org"
           target="_blank"
+          rel="noreferrer"
           className="font-medium text-[#646cff] leading-[inherit] hover:text-[#747bff] dark:hover:text-[#535bf2]">
           <img
             src={reactLogo}

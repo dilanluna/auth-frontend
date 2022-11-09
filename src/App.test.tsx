@@ -6,7 +6,7 @@ describe('App', () => {
   it('should display a counter', () => {
     render(<App />);
 
-    expect(screen.queryByText('count is 0')).toBeInTheDocument();
+    expect(screen.getByText('count is 0')).toBeInTheDocument();
   });
 
   it('should increment the counter after clicking on the button', async () => {
@@ -15,6 +15,6 @@ describe('App', () => {
     const button = screen.getByRole('button');
     await userEvent.click(button);
 
-    expect(screen.queryByText('count is 1')).toBeInTheDocument();
+    expect(screen.getByText('count is 1')).toBeInTheDocument();
   });
 });
