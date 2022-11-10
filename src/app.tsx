@@ -2,6 +2,7 @@ import { lazy, Suspense, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reactLogo from './assets/react.svg';
 
+const SignupPage = lazy(() => import('./auth/signup-page'));
 const SignupThanksPage = lazy(() => import('./auth/signup-thanks-page'));
 
 function Home() {
@@ -68,6 +69,10 @@ export default function App() {
 
           {/* Auth Routes */}
           <Route path="signup">
+            <Route
+              index
+              element={<SignupPage />}
+            />
             <Route
               path="thanks"
               element={<SignupThanksPage />}
