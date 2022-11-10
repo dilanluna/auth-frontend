@@ -13,7 +13,8 @@
     "react-hooks",
     "jest-dom",
     "testing-library",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "storybook"
   ],
   "extends": [
     "eslint:recommended",
@@ -23,6 +24,7 @@
     "plugin:jest-dom/recommended",
     "plugin:testing-library/react",
     "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended",
     "prettier/prettier"
   ],
   "settings": {
