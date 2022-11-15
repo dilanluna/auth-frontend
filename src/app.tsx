@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reactLogo from './assets/react.svg';
+
+const SignupThanksPage = lazy(() => import('./auth/signup-thanks-page'));
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -57,12 +59,22 @@ function Home() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          index
-          element={<Home />}
-        />
-      </Routes>
+      <Suspense>
+        <Routes>
+          <Route
+            index
+            element={<Home />}
+          />
+
+          {/* Auth Routes */}
+          <Route path="signup">
+            <Route
+              path="thanks"
+              element={<SignupThanksPage />}
+            />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
