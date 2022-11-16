@@ -26,6 +26,8 @@ jobs:
 
       - name: Build 🔨
         run: npm run build-storybook
+        env:
+          STORYBOOK_BASE_URL: /${{ github.event.repository.name }}/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
