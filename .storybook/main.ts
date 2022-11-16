@@ -1,3 +1,5 @@
+import { InlineConfig, mergeConfig } from 'vite';
+import topLevelAwait from 'vite-plugin-top-level-await';
 import type { StorybookViteConfig } from '@storybook/builder-vite';
 
 const config: StorybookViteConfig = {
@@ -16,8 +18,10 @@ const config: StorybookViteConfig = {
     storyStoreV7: true,
   },
   viteFinal: (config) => {
-    config.base = process.env.STORYBOOK_BASE_URL;
-    return config;
+    return mergeConfig(config, {
+      base: process.env.STORYBOOK_BASE_URL,
+      plugins: [topLevelAwait()],
+    } as InlineConfig);
   },
 };
 
