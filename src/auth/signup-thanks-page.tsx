@@ -1,3 +1,4 @@
+import Button from '../components/button';
 import checkIcon from '../assets/check.svg';
 import reactLogo from '../assets/react.svg';
 
@@ -28,9 +29,9 @@ export default function SignupThanksPage() {
           </p>
         </div>
 
-        <button className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:bg-blue-700 text-white font-medium py-[10px] px-4 rounded-md focus:ring focus:ring-blue-500 focus:ring-offset-1 min-w-[205px]">
+        <Button className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:bg-blue-700 text-white font-medium py-[10px] px-4 rounded-md focus:ring focus:ring-blue-500 focus:ring-offset-1 min-w-[205px]">
           Continue
-        </button>
+        </Button>
       </div>
     </div>
   );
