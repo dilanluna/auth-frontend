@@ -1,32 +1,12 @@
-import clsx from 'clsx';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { ErrorMessage } from '@hookform/error-message';
-import { forwardRef, InputHTMLAttributes } from 'react';
+import Input from '../components/input';
 import Label from '../components/label';
 import Button from '../components/button';
 import Feedback from '../components/feedback';
 
 const Joi = await import('joi');
-
-const Input = forwardRef<
-  HTMLInputElement,
-  InputHTMLAttributes<HTMLInputElement>
->(({ className, type, ...props }, ref) => {
-  return (
-    <input
-      ref={ref}
-      {...props}
-      type={type}
-      className={clsx(
-        'peer block text-neutral-600 leading-snug px-4 py-3 rounded border-gray-300 placeholder:text-gray-300 focus:ring-0 focus:outline-0 focus:border-gray-400 focus:invalid:border-red-500 invalid:border-red-500 w-full',
-        className,
-      )}
-    />
-  );
-});
-
-Input.displayName = 'Input';
 
 const validations = Joi.object<SignupUser>({
   firstname: Joi.string().trim().required().label('firstname'),
