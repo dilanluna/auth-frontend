@@ -1,9 +1,10 @@
-import Joi from 'joi';
 import clsx from 'clsx';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { ErrorMessage } from '@hookform/error-message';
 import { forwardRef, InputHTMLAttributes, LabelHTMLAttributes } from 'react';
+
+const Joi = await import('joi');
 
 function Label({
   children,
