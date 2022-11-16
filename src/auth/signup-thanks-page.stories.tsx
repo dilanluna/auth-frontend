@@ -13,4 +13,4 @@ const Template: ComponentStory<typeof SignupThanksPage> = () => (
   <SignupThanksPage />
 );
 
-export const Default = Template.bind({});
+export const _SignupThanksPage = Template.bind({});

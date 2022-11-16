@@ -16,4 +16,4 @@ export default {
 
 const Template: ComponentStory<typeof SignupPage> = () => <SignupPage />;
 
-export const Default = Template.bind({});
+export const _SignupPage = Template.bind({});

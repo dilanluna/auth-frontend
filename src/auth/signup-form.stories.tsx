@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import SignupForm from './signup-form';
 
 export default {
-  title: 'Auth/SignupForm',
+  title: 'Auth/Signup Form',
   component: SignupForm,
 } as ComponentMeta<typeof SignupForm>;
 
