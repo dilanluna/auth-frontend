@@ -1,6 +1,6 @@
-import type { StorybookConfig } from '@storybook/core-common';
+import type { StorybookViteConfig } from '@storybook/builder-vite';
 
-const config: StorybookConfig = {
+const config: StorybookViteConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
@@ -14,6 +14,10 @@ const config: StorybookConfig = {
   },
   features: {
     storyStoreV7: true,
+  },
+  viteFinal: (config) => {
+    config.base = process.env.STORYBOOK_BASE_URL;
+    return config;
   },
 };
 
