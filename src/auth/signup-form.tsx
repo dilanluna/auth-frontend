@@ -4,6 +4,7 @@ import { joiResolver } from '@hookform/resolvers/joi';
 import { ErrorMessage } from '@hookform/error-message';
 import { forwardRef, InputHTMLAttributes } from 'react';
 import Label from '../components/label';
+import Button from '../components/button';
 import Feedback from '../components/feedback';
 
 const Joi = await import('joi');
@@ -241,11 +242,11 @@ export default function SignupForm({
       </div>
 
       <div className="text-center mt-9">
-        <button
+        <Button
           type="submit"
           className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:bg-blue-700 text-white font-medium py-[10px] px-4 rounded-md focus:ring focus:ring-blue-500 focus:ring-offset-1 min-w-[205px]">
           Sign up
-        </button>
+        </Button>
       </div>
     </form>
   );
