@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { ErrorMessage } from '@hookform/error-message';
 import { forwardRef, InputHTMLAttributes, LabelHTMLAttributes } from 'react';
+import Feedback from '../components/feedback';
 
 const Joi = await import('joi');
 
@@ -41,17 +42,6 @@ const Input = forwardRef<
 });
 
 Input.displayName = 'Input';
-
-function Feedback({ message }: { message: string }) {
-  return (
-    <span
-      role="alert"
-      aria-label={message}
-      className="block text-sm text-red-500">
-      {message}
-    </span>
-  );
-}
 
 const validations = Joi.object<SignupUser>({
   firstname: Joi.string().trim().required().label('firstname'),
