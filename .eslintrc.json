@@ -27,6 +27,15 @@
     "plugin:storybook/recommended",
     "prettier/prettier"
   ],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "joi",
+        "message": "Please import joi as a dynamic import instead."
+      }
+    ]
+  },
   "settings": {
     "react": {
       "version": "detect"
