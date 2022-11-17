@@ -51,7 +51,6 @@ export default function SignupForm({
         <div className="col-span-2">
           <div className="relative">
             <Input
-              type="text"
               id="firstname"
               autoComplete="given-name"
               {...register('firstname')}
@@ -73,7 +72,6 @@ export default function SignupForm({
         <div className="col-span-2">
           <div className="relative">
             <Input
-              type="text"
               id="lastname"
               {...register('lastname')}
               autoComplete="family-name"
@@ -96,7 +94,6 @@ export default function SignupForm({
           <div className="relative">
             <Input
               id="id"
-              type="text"
               {...register('id')}
               placeholder="Enter your ID"
             />
@@ -206,7 +203,6 @@ export default function SignupForm({
             type="checkbox"
             id="terms-conditions"
             {...register('termsConditions')}
-            className="inline-block text-blue-500 px-2 py-2 w-auto"
           />
           <Label
             htmlFor="terms-conditions"
