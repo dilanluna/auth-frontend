@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { forwardRef, InputHTMLAttributes } from 'react';
 
-const inputTextTypes = [
+export const inputTextTypes = [
   'text',
   'password',
   'email',
@@ -16,7 +16,7 @@ const inputTextTypes = [
   'tel',
 ];
 
-const inputOptionTypes = ['checkbox', 'radio'];
+export const inputOptionTypes = ['checkbox', 'radio'];
 
 const Input = forwardRef<
   HTMLInputElement,
