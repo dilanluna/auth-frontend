@@ -7,8 +7,11 @@ export default {
   component: SignupForm,
 } as ComponentMeta<typeof SignupForm>;
 
-const Template: ComponentStory<typeof SignupForm> = () => (
-  <SignupForm onSubmit={(data) => window.alert(JSON.stringify(data))} />
+const Template: ComponentStory<typeof SignupForm> = (props) => (
+  <SignupForm
+    {...props}
+    onSubmit={(data) => window.alert(JSON.stringify(data))}
+  />
 );
 
 export const Empty = Template.bind({});
