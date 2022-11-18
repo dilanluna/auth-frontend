@@ -1,10 +1,10 @@
+import Input from '@/components/input';
+import Label from '@/components/label';
+import Button from '@/components/button';
 import { useForm } from 'react-hook-form';
+import Feedback from '@/components/feedback';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { ErrorMessage } from '@hookform/error-message';
-import Input from '../components/input';
-import Label from '../components/label';
-import Button from '../components/button';
-import Feedback from '../components/feedback';
 
 const Joi = await import('joi');
 

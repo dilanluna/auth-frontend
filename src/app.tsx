@@ -1,9 +1,9 @@
+import reactLogo from '@/assets/react.svg';
 import { lazy, Suspense, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import reactLogo from './assets/react.svg';
 
-const SignupPage = lazy(() => import('./auth/signup-page'));
-const SignupThanksPage = lazy(() => import('./auth/signup-thanks-page'));
+const SignupPage = lazy(() => import('@/auth/signup/signup-page'));
+const SignupThanksPage = lazy(() => import('@/auth/signup/signup-thanks-page'));
 
 function Home() {
   const [count, setCount] = useState(0);

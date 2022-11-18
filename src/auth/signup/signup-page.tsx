@@ -1,6 +1,6 @@
+import reactLogo from '@/assets/react.svg';
 import { useNavigate } from 'react-router-dom';
 import SignupForm from './signup-form';
-import reactLogo from '../assets/react.svg';
 
 export default function SignupPage() {
   const navigate = useNavigate();
