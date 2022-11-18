@@ -1,6 +1,6 @@
-import Button from '../components/button';
-import checkIcon from '../assets/check.svg';
-import reactLogo from '../assets/react.svg';
+import Button from '@/components/button';
+import checkIcon from '@/assets/check.svg';
+import reactLogo from '@/assets/react.svg';
 
 export default function SignupThanksPage() {
   return (
