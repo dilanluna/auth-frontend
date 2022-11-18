@@ -8,3 +8,8 @@ type SignupUser = {
   confirmPassword: string;
   termsConditions: boolean;
 };
+
+type SigninUser = {
+  email: string;
+  password: string;
+};
