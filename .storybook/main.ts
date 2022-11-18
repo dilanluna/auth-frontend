@@ -1,3 +1,4 @@
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { InlineConfig, mergeConfig } from 'vite';
 import topLevelAwait from 'vite-plugin-top-level-await';
 import type { StorybookViteConfig } from '@storybook/builder-vite';
@@ -20,7 +21,7 @@ const config: StorybookViteConfig = {
   viteFinal: (config) => {
     return mergeConfig(config, {
       base: process.env.STORYBOOK_BASE_URL,
-      plugins: [topLevelAwait()],
+      plugins: [topLevelAwait(), tsconfigPaths()],
     } as InlineConfig);
   },
 };
