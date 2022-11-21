@@ -2,6 +2,7 @@ import reactLogo from '@/assets/react.svg';
 import { lazy, Suspense, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+const SigninPage = lazy(() => import('./auth/signin/signin-page'));
 const SignupPage = lazy(() => import('@/auth/signup/signup-page'));
 const SignupThanksPage = lazy(() => import('@/auth/signup/signup-thanks-page'));
 
@@ -78,6 +79,11 @@ export default function App() {
               element={<SignupThanksPage />}
             />
           </Route>
+
+          <Route
+            path="signin"
+            element={<SigninPage />}
+          />
         </Routes>
       </Suspense>
     </BrowserRouter>
